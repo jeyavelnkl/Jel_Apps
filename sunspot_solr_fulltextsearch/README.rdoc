@@ -1,0 +1,23 @@
+== README
+
+To run the application, you'll need to include a database.yml file in the config directory
+
+I have included a template named database.example.yml
+
+Use it as a guide and change the settings according to your environment and be sure to save the file as database.yml
+
+(If you're using sqlite3, just drop the .example and use as is)
+
+
+
+
+Refer the below reference site
+
+https://code.tutsplus.com/tutorials/full-text-search-in-rails--cms-20638
+
+
+created search example app from https://github.com/echessa/sunspot_example(base)
+
+and followed full text search using solr search engine server
+
+run the solr server using the rake command mentioned in the above reference site
