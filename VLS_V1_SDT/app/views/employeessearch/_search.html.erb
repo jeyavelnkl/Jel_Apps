@@ -1,0 +1,46 @@
+<br>
+<h3>Search Results:</h3>
+<% if @employees.present? %>
+<table>
+  <thead>
+    <tr>
+      <th>Emp code</th>
+      <th>Name</th>
+      <!-- <th>Email</th> -->
+      <!-- <th>Mobile no</th> -->
+      <th>Exp(Y)</th>
+      <th>Role</th>
+      <th>Location</th>
+      <th>Project</th>
+      <!-- <th>Start</th>
+      <th>End</th> -->
+      <th>Skills</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @employees.each do |employee| %>
+      <tr>
+        <td><%= employee.employee_code %></td>
+        <td><%= employee.name %></td>
+        <!-- <td><%= employee.email %></td> -->
+        <!-- <td><%= employee.mobile_no %></td> -->
+        <td><%= employee.experience %></td>
+        <td><%= employee.role.name %></td>
+        <td><%= employee.location.name %></td>
+        <td><%= employee.project.name %></td>
+        <!-- <td><%= employee.project.start_date %></td>
+        <td><%= employee.project.end_date %></td> -->
+        <td><%= employee.skill.name %></td>
+        <td><%= link_to 'Show', employee %></td>
+        <td><%= link_to 'Edit', edit_employee_path(employee) %></td>
+        <td><%= link_to 'Destroy', employee, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%else%>
+<div>No Records Found.</div>
+<%end%>
+<br>

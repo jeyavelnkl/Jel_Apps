@@ -4,6 +4,7 @@ development:
   DB_PORT: "3306"
   DB_USERNAME: "root"
   DB_PASSWORD: "a"
+  
 test:
   SECRET_KEY_BASE: "20761ab0f8c97edc0cf6435a7f369c0019c24398a1452a266c50d81c0679f7f315642ca64fe4f01f083296120ca72345c3755ee44afeefe04da0bd8b4d7e2350"
   DB_HOST: "localhost"

@@ -1,0 +1,226 @@
+<%= form_for(employee , :html => {class: 'form-horizontal'}) do |f| %>
+  <% if employee.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(employee.errors.count, "error") %> prohibited this employee from being saved:</h2>
+
+      <ul>
+      <% employee.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :employee_code, :class => "control-label col-sm-2" %>
+    <div class="col-sm-6">
+      <%= f.text_field :employee_code %>
+    </div>
+  </div>
+  
+  <div class="form-group">
+    <%= f.label :name, :class => "control-label col-sm-2" %>
+    <div class="col-sm-6">
+      <%= f.text_field :name %>
+    </div>
+  </div>
+  
+   <div class="form-group">
+    <%= f.label :known_as, :class => "control-label col-sm-2" %>
+    <div class="col-sm-6">
+      <%= f.text_field :known_as %>
+    </div>
+  </div>
+
+ <div class="form-group">
+    <%= f.label :gender, :class => "control-label col-sm-2" %>
+    <div class="col-sm-6">
+      <%= f.text_field :gender %>
+    </div>
+  </div>
+
+ <div class="form-group">
+    <%= f.label :city_of_birth, :class => "control-label col-sm-2" %>
+    <div class="col-sm-6">
+      <%= f.text_field :city_of_birth %>
+    </div>
+  </div>
+
+ 
+  
+  <div class="form-group">
+    <%= f.label :official_email, :class => "control-label col-sm-2" %>
+    <div class="col-sm-6">
+      <%= f.email_field :official_email %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :fathers_name, :class => "control-label col-sm-2" %>
+    <div class="col-sm-6">
+      <%= f.text_field :fathers_name %>
+    </div>
+  </div>
+  
+  <div class="form-group">
+    <%= f.label :religion, :class => "control-label col-sm-2" %>
+    <div class="col-sm-6">
+      <%= f.text_field :religion %>
+    </div>
+  </div>
+
+<div class="form-group">
+    <%= f.label :nationality, :class => "control-label col-sm-2" %>
+    <div class="col-sm-6">
+      <%= f.text_field :nationality %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :dob, :class => "control-label col-sm-2" %>
+    <div class="col-sm-6">
+      <%= f.date_select :dob %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :country_of_birth, :class => "control-label col-sm-2" %>
+    <div class="col-sm-6">
+      <%= f.text_field :country_of_birth %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :domicilie_state, :class => "control-label col-sm-2" %>
+    <div class="col-sm-6">
+      <%= f.text_field :domicilie_state %>
+    </div>
+  </div>
+
+
+  <div class="form-group">
+    <%= f.label :personal_email, :class => "control-label col-sm-2" %>
+    <div class="col-sm-6">
+      <%= f.email_field :personal_email %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :community, :class => "control-label col-sm-2" %>
+    <div class="col-sm-6">
+      <%= f.text_field :community %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :mother_tongue, :class => "control-label col-sm-2" %>
+    <div class="col-sm-6">
+      <%= f.text_field :mother_tongue %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :doj, :class => "control-label col-sm-2" %>
+    <div class="col-sm-6">
+      <%= f.date_select :doj %>
+    </div>
+   </div>
+
+  <div class="form-group">
+    <%= f.label :mobile_no, :class => "control-label col-sm-2" %>
+    <div class="col-sm-6">
+      <%= f.number_field :mobile_no %>
+    </div>
+   </div>
+
+  <div class="form-group">
+    <%= f.label :permanant_address, :class => "control-label col-sm-2" %>
+    <div class="col-sm-6">
+      <%= f.text_area :permanant_address %>
+    </div>
+  </div>
+ 
+  <div class="form-group">
+    <%= f.label :mailing_address, :class => "control-label col-sm-2" %>
+    <div class="col-sm-6">
+      <%= f.text_area :mailing_address %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :total_year_experience, :class => "control-label col-sm-2" %>
+    <div class="col-sm-6">
+      <%= f.number_field :total_year_experience %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :primary_skill, :class => "control-label col-sm-2" %>
+    <div class="col-sm-6">
+      <%= f.text_field :primary_skill %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :secondary_skill, :class => "control-label col-sm-2" %>
+    <div class="col-sm-6">
+      <%= f.text_field :secondary_skill %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :other_skill, :class => "control-label col-sm-2" %>
+    <div class="col-sm-6">
+      <%= f.text_field :other_skill %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :exp_domain, :class => "control-label col-sm-2" %>
+    <div class="col-sm-6">
+      <%= f.text_field :exp_domain %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :exp_technologies, :class => "control-label col-sm-2" %>
+    <div class="col-sm-6">
+      <%= f.text_field :exp_technologies %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :exp_functions, :class => "control-label col-sm-2" %>
+    <div class="col-sm-6">
+      <%= f.text_field :exp_functions %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :location_id, :class => "control-label col-sm-2" %>
+    <div class="col-sm-6">
+      <%= f.select(:location_id, options_for_select(Location.all.collect{ |u| [u.name, u.id] }, :selected => f.object.location_id)) %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :project_id, :class => "control-label col-sm-2" %>
+    <div class="col-sm-6">
+      <%= f.select(:project_id, options_for_select(Project.all.collect{ |u| [u.name, u.id] }, :selected => f.object.project_id)) %>
+    </div>
+  </div>
+
+
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+
+<!-- 
+t.date     "dob"
+    t.string   "country_of_birth"
+    t.string   "domicilie_state"
+    t.string   "personal_email"
+    t.string   "community"
+    t.string   "mother_tongue"
+    t.date     "doj"
+    t.string   "mobile_no"
+    t.text     "permanant_address"
+    t.text     "mailing_address"
+    t.integer  "total_year_experience"
+    t.string   "primary_skill"
+    t.string   "secondary_skill"
+    t.string   "other_skill"
+    t.string   "exp_domain"
+    t.string   "exp_technologies"
+    t.string   "exp_functions" -->

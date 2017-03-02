@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>VLSV1Sdt</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  
+  <body>
+  	<%= render 'shared/navigation' %>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+    <div class="container">
+      <div class="row">
+        <!-- <div class="col-xs-2">
+          <h3>Left Side Menu</h3>
+        </div> -->
+        <div class="col-xs-12">
+          <%= yield %>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
